@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+/* Newly added after using JSX */
+
+.container {
+  color: brown;
+  background-color: slateblue;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+}
