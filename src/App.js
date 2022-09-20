@@ -1,15 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 
-const number = 789;
-const singer = {name: 'Dr. Mahfuzur Rahman', job: 'Singer'}
-const singer2 = {name: 'Eva Rahman', job: 'Singer'}
-const singerStyle = {
-  color: 'purple',
-  backgroundColor: 'white'
-}
+// const number = 789;
+const singers = [
+  {name: 'Dr. Mahfuzur Rahman', job: 'Singer'},
+  {name: 'Eva Rahman', job: 'Singer'}
+]
+// const singerStyle = {
+//   color: 'purple',
+//   backgroundColor: 'white'
+// }
 
 function App() {
+  const actors = ['Tom Cruise', 'Robert Jr', 'Paul Walker', 'Jason Snatham', 'John Snow']
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -36,10 +39,23 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Person name="Sakib Al Hasan" profession="Cricketer"></Person>
-      <Person name="Tom Cruise" profession="Actor"></Person>
-      <Person profession="Singer"></Person>
 
+      {/* Creating dynamic elements */}
+
+      {
+        actors.map(actor => <li>Name: {actor}</li>)
+      }
+
+      {
+        actors.map(actor => <Person name={actor}></Person>)
+      }
+
+      {
+        singers.map(singer => <Person name = {singer. name}></Person>)
+      }
+      {/* <Person name={actors[1]} profession="Cricketer"></Person>
+      <Person name={actors[0]} profession="Actor"></Person>
+      <Person profession="Singer"></Person> */}
       {/* Can use normal html tag too.. */}
       <h3>New component: YaY</h3>
 
@@ -54,7 +70,7 @@ function Person(props){
   return (
     <div className='person'>
       <h1>{props.name}</h1>
-      <p>Profession: {props. profession}</p>
+      <p>{props. profession}</p>
     </div>
   )
 }
@@ -62,8 +78,8 @@ function Person(props){
 function Friend(props){
   return(
     <div className='friend'>
-      <h1>{props. name}</h1>
-      <p>Phone: {props. phone}</p>
+      <h1>{props.name}</h1>
+      <p>Phone: {props.phone}</p>
     </div>
   )
 }
