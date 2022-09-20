@@ -36,18 +36,36 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <Person name="Sakib Al Hasan" profession="Cricketer"></Person>
+      <Person name="Tom Cruise" profession="Actor"></Person>
+      <Person profession="Singer"></Person>
 
-      <Person></Person>
+      {/* Can use normal html tag too.. */}
+      <h3>New component: YaY</h3>
+
+      <Friend name="Sakib's Friend" phone="0172000000"></Friend>
 
     </div>
   );
 }
 
-function Person(){
-  return <div>
-    <h1>Sakib Al Hasan</h1>
-    <p>Profession: Cricketer</p>
-  </div>
+      // Declaring Component
+function Person(props){
+  return (
+    <div className='person'>
+      <h1>{props.name}</h1>
+      <p>Profession: {props. profession}</p>
+    </div>
+  )
+}
+
+function Friend(props){
+  return(
+    <div className='friend'>
+      <h1>{props. name}</h1>
+      <p>Phone: {props. phone}</p>
+    </div>
+  )
 }
 
 export default App;

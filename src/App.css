@@ -46,3 +46,18 @@
   padding-right: 40px;
   border-radius: 10px;
 }
+
+.person {
+  background-color: saddlebrown;
+  border: 2px solid slateblue;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
+.friend {
+  background-color: rgb(157, 139, 126);
+  border: 2px solid slateblue;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
